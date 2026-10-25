@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ANON BARBER</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="hero">
+      <div class="header-top">
+        <span class="brand">
+          <img src="images/logo.png" alt="ANON BARBER">
+        </span>
+
+        <nav class="navigation">
+          <a href="#service-section">Послуги</a>
+          <a href="#footer">Соцмережі</a>
+          <a href="#footer">Контакти</a>
+        </nav>
+      </div>
+
+      <div class="hero-content" id="top">
+        <h1>
+          Вітаємо у барбершопі<br>
+          ANON BARBER
+        </h1>
+
+        <p>
+          Професійна стрижка, гоління, укладання та стильний
+          сервіс у комфортній атмосфері. Зробіть запис, отримайте
+          персональну консультацію та поверніться з новим образом.
+        </p>
+
+        <a class="button hero-button" href="#booking-section">
+          Записатися
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Services -->
+    <section class="services section" id="service-section">
+      <div class="container">
+        <h2>Послуги</h2>
+
+        <div class="services-card">
+          <img class="services-photo" src="images/services.jpg" alt="Фото барбера">
+
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Послуга</th>
+                <th>Ціна</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Стрижка</td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td>Подовжена стрижка</td>
+                <td>1500</td>
+              </tr>
+              <tr>
+                <td>Батько та син</td>
+                <td>1500</td>
+              </tr>
+              <tr>
+                <td>Стрижка та гоління</td>
+                <td>1200</td>
+              </tr>
+              <tr>
+                <td>Стрижка бороди</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td>Укладання</td>
+                <td>350</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barbers -->
+    <section class="barbers section">
+      <div class="container">
+        <h2 id="barbers-title">Наші барбери</h2>
+      </div>
+
+      <div class="barbers-panel">
+        <div class="container barbers-grid">
+          <article class="barber-card">
+            <img src="images/marcus-reed.png" alt="Барбер Marcus Reed">
+            <h3>Marcus Reed</h3>
+          </article>
+
+          <article class="barber-card">
+            <img src="images/andre-cole.jpg" alt="Барбер Andre Cole">
+            <h3>Andre Cole</h3>
+          </article>
+
+          <article class="barber-card">
+            <img src="images/leo-bennett.jpg" alt="Барбер Leo Bennett">
+            <h3>Leo Bennett</h3>
+          </article>
+        </div>
+
+        <span class="barbers-arrow">
+          <img src="images/arrow.svg" alt="Стрілка">
+        </span>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews section">
+      <div class="container">
+        <h2 id="reviews-title">Відгуки</h2>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-heading">
+              <h3>Іван Коваль</h3>
+              <div class="review-rating">
+                <span>5/5</span>
+                <span class="stars">☆☆☆☆☆</span>
+              </div>
+            </div>
+            <p>
+              Барбер працював дуже уважно — стрижка вийшла як на
+              фото, а консультація перед процедурою була дуже корисною.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-heading">
+              <h3>Марія Савчук</h3>
+              <div class="review-rating">
+                <span>5/5</span>
+                <span class="stars">☆☆☆☆☆</span>
+              </div>
+            </div>
+            <p>
+              Укладання вийшло дуже стильно, а атмосфера в салоні
+              була спокійною та комфортною.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-heading">
+              <h3>Олександр Петренко</h3>
+              <div class="review-rating">
+                <span>4/5</span>
+                <span class="stars">☆☆☆☆☆</span>
+              </div>
+            </div>
+            <p>
+              Стрижка зроблена якісно, а гоління пройшло без
+              дискомфорту. Рекомендую для тих, хто хоче швидкий результат.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-heading">
+              <h3>Дмитро Бондар</h3>
+              <div class="review-rating">
+                <span>5/5</span>
+                <span class="stars">☆☆☆☆☆</span>
+              </div>
+            </div>
+            <p>
+              Бороду підстригли дуже акуратно, а форма вийшла саме
+              такою, як я хотів. Дуже задоволений роботою барбера.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="booking section" id="booking-section">
+      <div class="container booking-headings">
+        <h2 id="booking-title">Записатися онлайн</h2>
+        <span class="booking-or">Або</span>
+        <h2 id="contacts-title">Подзвоніть нам</h2>
+      </div>
+
+      <div class="booking-panel">
+        <div class="container booking-layout">
+          <form class="booking-form">
+            <input id="customer-name" name="name" type="text" placeholder="Як вас звати">
+            <input id="customer-phone" name="phone" type="tel" placeholder="Ваш телефон">
+            <input id="appointment-time" name="appointment" type="text" placeholder="Виберіть час зустрічі">
+
+            <button class="button booking-button" type="button">
+              Записатися
+            </button>
+          </form>
+
+          <div class="contacts">
+            <address class="contact-card">
+              <spam>м. Львів</spam>
+              <span>вул. А. Сахарова 45</span>
+              <span>+38 (093) 242-40-69</span>
+            </address>
+
+            <address class="contact-card">
+              <spam>м. Львів</spam>
+              <span>вул. Тролейбусна 14</span>
+              <span>+38 (063) 252-10-09</span>
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <section class="socials">
+        <h2 id="socials-title">Наші соцмережі</h2>
+
+        <ul class="social-list">
+          <li>
+            <a class="social-row" href="https://www.instagram.com/AnonBarber_official/">
+              <span class="social-icon">
+                <img src="images/instagram.svg" alt="Instagram">
+              </span>
+              <span>@AnonBarber_official</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="social-row" href="https://www.facebook.com/AnonBarber">
+              <span class="social-icon">
+                <img src="images/facebook.svg" alt="Facebook">
+              </span>
+              <span>@AnonBarber</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="social-row" href="mailto:anonbarber@gmail.com">
+              <span class="social-icon">
+                <img src="images/email.svg" alt="Email">
+              </span>
+              <span>anonbarber@gmail.com</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="footer-right">
+        <section class="working-hours">
+          <h2 id="hours-title">Ми працюємо</h2>
+
+          <div class="social-row">
+            <span class="social-icon">
+                <img src="images/clock.svg" alt="Email">
+              </span>
+            <span>8:00 - 21:00</span>
+          </div>
+        </section>
+
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="ANON BARBER">
+
+          <p>
+            Ядерний барбершоп<br>
+            для ядерних стрижок
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
