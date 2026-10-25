@@ -66,6 +66,11 @@ h2 {
 
 .hero {
   position: relative;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   width: 90%;
   max-width: 1280px;
   min-height: 656px;
@@ -73,14 +78,24 @@ h2 {
   padding: 40px 32px;
   overflow: hidden;
   border-radius: 24px;
-  background: linear-gradient(rgb(0 0 0 / 62%), rgb(0 0 0 / 62%)), url("images/hero.jpg") center / cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
+.hero-content{
+  position: relative;
+  z-index: 1;
+}
 .navbar {
   position: fixed;
   width: 100%;
   z-index: 1000;
   padding: 0 72px;
+  top: -15px;
   background-color: #0f0f0f;
   border-bottom: 1px solid rgba(191, 255, 183, 0.2);
   display: flex;
@@ -349,7 +364,55 @@ h2 {
   line-height: 1.5;
 }
 
-/* Booking Layout Update */
+.hero-video {
+  position: relative;
+  overflow: hidden;
+  padding: 200px 0;
+  margin-bottom: 24px;
+  color: #fff;
+  text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.hero-video__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* Затемнення під стиль сайту */
+  z-index: -1;
+}
+
+.hero-video__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-video__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video__media { display: none; }
+  .hero-video {
+    background: #0f0f0f;
+  }
+}
+
+
 .booking {
   padding-bottom: 72px;
 }
@@ -531,7 +594,6 @@ h2 {
   line-height: 1.35;
 }
 
-
 @media (max-width: 1024px) {
   .navbar {
     padding: 0 32px;
@@ -559,10 +621,6 @@ h2 {
     padding: 32px;
   }
 
-  .barbers-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .booking-mobile-layout {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -573,7 +631,6 @@ h2 {
     gap: 48px;
   }
 }
-
 
 @media (max-width: 768px) {
   h2, .booking-section-title {
@@ -632,8 +689,29 @@ h2 {
     padding: 12px 0;
   }
 
+  .barbers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .barbers-panel {
+    padding: 20px 10px;
+  }
+
+  .barber-card {
+    width: 250px;
+    height: auto;
+  }
+
   .reviews-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-video {
+    padding: 120px 16px;
+  }
+
+  .hero-video__title {
+    font-size: 28px;
   }
 
   .booking-panel {
@@ -668,5 +746,51 @@ h2 {
   .footer-brand p {
     font-size: 16px;
     line-height: 1.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand img {
+    height: 60px; 
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .services-table td {
+    font-size: 14px;
+  }
+
+  .services-table th {
+    font-size: 16px;
+  }
+
+  .barbers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .barber-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-video__title {
+    font-size: 24px;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-brand img {
+    width: 140px;
   }
 }
